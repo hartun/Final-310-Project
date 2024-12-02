@@ -10,3 +10,10 @@
 //         expect(isSoft).toBeFalsy();
 //         });
 // });
+
+describe('Show helper message', () => {
+    it('should show the helper message', () => {
+        const alert = setTimeout(helpMessage, 3000);
+        expert(alert).toEqual(true);
+    });
+});
