@@ -30,22 +30,18 @@
 //   .catch(err => console.error(err));
 
 function helpMessage() {
-  alert('Text (206) 867-5309 for help.');
+  alert('Have questions about YouTube Channel Insights? Text (206) 867-5309.');
 }
-setTimeout(helpMessage, 3000);
+setTimeout(helpMessage, 2000);
 
 function stopMessage() {
   clearTimeout(helpMessage);
 }
 
-function myFunction() {
-  // Get the snackbar DIV
-  var snackBar = document.getElementById('snackbar');
-
-  // Add the "show" class to DIV
-  snackBar.className = 'show';
-
-  // After 3 seconds, remove the show class from DIV
-  setTimeout(function(){ snackBar.className = snackBar.className.replace('show', ''); }, 3000);
-} 
-
+//Setting up the snackbar
+const button = document.getElementById('snackbarButton');
+let snackBar = document.getElementById('snackbar');
+button.addEventListener('click', function() {
+   snackBar.className = 'show';
+   setTimeout(function(){ snackBar.className = snackBar.className.replace('show', ''); }, 3000);
+});
