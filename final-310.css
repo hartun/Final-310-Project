@@ -4,10 +4,6 @@ body {
     background-color: lightblue;
   }
   
-
-
-
-
   form {
     display: inline-block;
     /* Form outline */
@@ -53,8 +49,30 @@ body {
   }
   
   button {
-    /* This extra margin represent roughly the same space as the space
+/* This extra margin represent roughly the same space as the space
        between the labels and their text fields */
     margin-left: 0.5em;
   }
   
+/* snackbar position */
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  font: 1em sans-serif;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+/* Show the snackbar on button click */
+#snackbar.show {
+  visibility: visible;
+  
+}

@@ -1,30 +1,26 @@
 //console.log('ready')
-const formEl = document.getElementById('');
-const yearEl = document.getElementById('year');
-const monthEl = document.getElementById('month');
-const dateEl = document.getElementById('date');
-const zipEl = document.getElementById('zip');
+// const formEl = document.getElementById('');
+// const yearEl = document.getElementById('year');
+// const monthEl = document.getElementById('month');
+// const dateEl = document.getElementById('date');
+// const zipEl = document.getElementById('zip');
 
-formEl.addEventListener('submit', function(e) {
-  e.preventDefault();
+// formEl.addEventListener('submit', function(e) {
+//   e.preventDefault();
 
-  const year = yearEl.value;
-  const month = monthEl.value;
-  const date = dateEl.value;
+//   const year = yearEl.value;
+//   const month = monthEl.value;
+//   const date = dateEl.value;
 
-  const URL = `https://api.tomorrow.io/v4/weather/forecast?location=${zip}&apikey=${API_KEY}`
+//   const URL = `https://api.tomorrow.io/v4/weather/forecast?location=${zip}&apikey=${API_KEY}`
 
-  fetch(URL).then((result) => {
-    return result.json()
-  }).then((data) => {
-    console.log(data);
-  })
+//   fetch(URL).then((result) => {
+//     return result.json()
+//   }).then((data) => {
+//     console.log(data);
+//   })
 
-});
-
-
-
-
+// });
 
 // const options = {method: 'GET', headers: {accept: 'application/json'}};
 
@@ -33,11 +29,23 @@ formEl.addEventListener('submit', function(e) {
 //   .then(response => console.log(response))
 //   .catch(err => console.error(err));
 
-// function helpMessage() {
-//   alert('Text 206-867-5309 for help.');
-// }
-// setTimeout(helpMessage, 3000);
+function helpMessage() {
+  alert('Text (206) 867-5309 for help.');
+}
+setTimeout(helpMessage, 3000);
 
-// function stopMessage() {
-//   clearTimeout(helpMessage);
-// }
+function stopMessage() {
+  clearTimeout(helpMessage);
+}
+
+function myFunction() {
+  // Get the snackbar DIV
+  var snackBar = document.getElementById('snackbar');
+
+  // Add the "show" class to DIV
+  snackBar.className = 'show';
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ snackBar.className = snackBar.className.replace('show', ''); }, 3000);
+} 
+
