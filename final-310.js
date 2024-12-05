@@ -40,7 +40,7 @@ function stopMessage() {
 
 //Setting up the snackbar
 const button = document.getElementById('snackbarButton');
-let snackBar = document.getElementById('snackbar');
+const snackBar = document.getElementById('snackbar');
 button.addEventListener('click', function() {
    snackBar.className = 'show';
    setTimeout(function(){ snackBar.className = snackBar.className.replace('show', ''); }, 3000);
