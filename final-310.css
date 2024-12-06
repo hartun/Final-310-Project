@@ -16,6 +16,13 @@ body {
     font: 1em sans-serif;
   }
 
+  h5 {
+    font: 1em sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    color: red;
+  }
+
   .loader-box {
     display: grid;
     place-items: center;
@@ -42,8 +49,8 @@ body {
   form {
     display: inline-block;
     position: absolute;
-    top: 30%;
-    right 50%;
+    top: 40%;
+    right: 5%;
     height: 50%
     width: 50%;
     padding: 1em;
