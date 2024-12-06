@@ -87,6 +87,14 @@ body {
     /* Align buttons with the text fields */
     text-align: center; 
   }
+
+#snackbarContainer {
+  position: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
     
 /* snackbar position */
 #snackbar {
@@ -108,5 +116,4 @@ body {
 /* Show the snackbar on button click */
 #snackbar.show {
   visibility: visible;
-  
 }
