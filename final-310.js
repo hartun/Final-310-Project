@@ -1,33 +1,16 @@
-//console.log('ready')
-// const formEl = document.getElementById('');
-// const yearEl = document.getElementById('year');
-// const monthEl = document.getElementById('month');
-// const dateEl = document.getElementById('date');
-// const zipEl = document.getElementById('zip');
+const videoSection = document.querySelector('section');
 
-// formEl.addEventListener('submit', function(e) {
-//   e.preventDefault();
-
-//   const year = yearEl.value;
-//   const month = monthEl.value;
-//   const date = dateEl.value;
-
-//   const URL = `https://api.tomorrow.io/v4/weather/forecast?location=${zip}&apikey=${API_KEY}`
-
-//   fetch(URL).then((result) => {
-//     return result.json()
-//   }).then((data) => {
-//     console.log(data);
-//   })
-
-// });
-
-// const options = {method: 'GET', headers: {accept: 'application/json'}};
-
-// fetch('https://api.tomorrow.io/v4/weather/forecast?location=46805&apikey=DLP9YEUDu06SiE2fvph4HQe7R9ZKdAKp', options)
-//   .then(response => response.json())
-//   .then(response => console.log(response))
-//   .catch(err => console.error(err));
+fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UU1M6N5LUj3c1JhiZXiNDq3A&key=AIzaSyDu0XoK-4KitG1sLxKzankX9DGd6Hx6PD4')
+.then(res => res.json())
+.then(data => {
+  data.items.forEach(el => {
+  videoSection.innerHTML =
+  `<a target="_blank" href="https://www.youtube.com/watch?v=${el.snippet.resourceId.videoId}" class="yt-video">
+      <img src="${el.snippet.thumbnails.maxres.url}" />
+      <h4>${el.snippet.title}</h4>
+  </a>`
+  });
+});
 
 function helpMessage() {
   alert('Have questions about YouTube Channel Insights? Text (206) 867-5309.');
