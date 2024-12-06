@@ -27,7 +27,7 @@ body {
   }
 
   .yt-video {
-    display: block;
+    display: flex;
     text-decoration: none;
     background: #333;
     width: 30%;
