@@ -34,25 +34,20 @@ body {
   }
 
   .yt-video {
-    display: flex;
+    display: inline-block;
     text-decoration: none;
     background: #333;
-    width: 30%;
+    width: 50%;
+    height: 300px;
     border-radius: 5px;
     overflow: hidden;
-    margin-bottom: 10px;
-    margin-left:150px;
-    height: 250px;
+    margin-bottom: 40px;
     color: white;
   }
 
   form {
     display: inline-block;
-    position: absolute;
-    top: 40%;
-    right: 5%;
-    height: 50%
-    width: 50%;
+    position: center;
     padding: 1em;
     border: 1px solid #ccc;
     border-radius: 1em;
@@ -107,14 +102,13 @@ body {
 #snackbar {
   visibility: hidden;
   min-width: 250px;
-  margin-left: -125px;
   font: 1em sans-serif;
   background-color: lightgray;
   color: black;
   text-align: center;
   border-radius: 2px;
   padding: 16px;
-  position: fixed;
+  position: static;
   z-index: 1;
   left: 50%;
   bottom: 30px;
