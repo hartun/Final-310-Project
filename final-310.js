@@ -21,6 +21,32 @@ function stopMessage() {
   clearTimeout(helpMessage);
 }
 
+//form validation
+const fName = document.getElementById('fName');
+const lName = document.getElementById('lName');
+const email = document.getElementById('email');
+const form = document.getElementById('form');
+const errorElement = document.getElementById('error');
+const regex = /\w+@\w+\.\w+/;
+
+form.addEventListener('submit', (e) => {
+  let messages = [];
+  if (fName.value === '' || fName.value == null || lName.value === '' || lName.value == null) {
+    alert('Name is required.');
+  } 
+
+  if (messages.length > 0) {
+    e.preventDefault();
+    errorElement.innerText = message.join(', ')
+  }
+
+  if (!email.value.match(/\w+@\w+\.\w+/)) {
+     alert('Please enter a valid email.')
+     return false;
+   }
+  
+});
+
 //Setting up the snackbar
 const button = document.getElementById('snackbarButton');
 const snackBar = document.getElementById('snackbar');
