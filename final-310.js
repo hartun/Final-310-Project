@@ -13,14 +13,21 @@ fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&play
   });
 });
 
+let alertContent = 'Have questions about YouTube Channel Insights? Text (206) 867-5309.'
+
 function helpMessage() {
-  alert('Have questions about YouTube Channel Insights? Text (206) 867-5309.');
+  alert(alertContent);
 }
 setTimeout(helpMessage, 2000);
 
 function stopMessage() {
   clearTimeout(helpMessage);
 }
+
+let notice = JSON.stringify(alertContent);
+
+localStorage.setItem('notice', notice);
+console.log(localStorage);
 
 //form validation
 const fName = document.getElementById('fName');
@@ -43,18 +50,8 @@ form.addEventListener('submit', (e) => {
      alert('Please enter a valid email.')
      return false;
    }
-   let email_ser = JSON.stringify(email);
-
-   localStorage.setItem('email', email_ser);
-   console.log(localStorage);
 
 });
-
-//local storage
-
-
-
-
 
 //Setting up the snackbar
 const button = document.getElementById('snackbarButton');
