@@ -1,3 +1,5 @@
+//This file has the info that you need to make the app work with YouTube 
+
 //API Key: AIzaSyDu0XoK-4KitG1sLxKzankX9DGd6Hx6PD4
 
 //channel ID: UC1M6N5LUj3c1JhiZXiNDq3A
@@ -5,5 +7,3 @@
 //upload ID: UU1M6N5LUj3c1JhiZXiNDq3A
 
 //URL: https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UU1M6N5LUj3c1JhiZXiNDq3A&key=AIzaSyDu0XoK-4KitG1sLxKzankX9DGd6Hx6PD4
-
-
