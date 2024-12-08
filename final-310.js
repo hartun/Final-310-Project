@@ -24,6 +24,7 @@ function stopMessage() {
   clearTimeout(helpMessage);
 }
 
+//local storage
 let notice = JSON.stringify(alertContent);
 
 localStorage.setItem('notice', notice);
